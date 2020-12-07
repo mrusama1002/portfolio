@@ -209,8 +209,19 @@
                             <span class="date">2020</span>
                             <h2>Web Developer</h2>
                             <span class="position">Native Brains</span>
-                            <p>Now Currently working in NATIVE BRAINS as a PHP developer, using LARAVEL, LIVEWIRE, and
-                                Vuejs. Also have a experience of API</p>
+                            <p>07 months experience in NATIVE BRAINS as a PHP developer, using LARAVEL, LIVEWIRE, and
+                                Vuejs. Also have a experience of API in Lumen</p>
+                        </div>
+                    </div>
+                    <div class="resume-wrap d-flex ftco-animate">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="flaticon-ideas"></span>
+                        </div>
+                        <div class="text pl-3">
+                            <span class="date">2020</span>
+                            <h2>Web Developer</h2>
+                            <span class="position">BookingWhizz</span>
+                            <p>Currently working BookingWhizz as a PHP developer</p>
                         </div>
                     </div>
                     <div id="page-3" class="page three">
