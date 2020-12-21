@@ -94,7 +94,7 @@
                             <li class="d-flex"><span>Address:</span> <span>Karachi Pakistan</span></li>
                             <li class="d-flex"><span>Zip code:</span> <span>78900</span></li>
                             <li class="d-flex"><span>Email:</span> <span>mr.usamakhan1002@gmail.com</span></li>
-                            <li class="d-flex"><span>Phone: </span> <span>+92-332-2208090</span></li>
+{{--                            <li class="d-flex"><span>Phone: </span> <span>+92-332-2208090</span></li>--}}
                         </ul>
                     </div>
                 </div>
@@ -693,7 +693,7 @@
                     </div>
                     <div>
                         <h3 class="mb-4">Address</h3>
-                        <p>H.no E-114, Sector-10, Gulshan-e-Millat, Karachi, Pakistan.</p>
+                        <p>Gulshan-e-Millat, Karachi, Pakistan.</p>
                     </div>
                 </div>
             </div>
