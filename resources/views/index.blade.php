@@ -811,7 +811,7 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">H.no E-114, Sector-10, Gulshan-e-Millat, Karachi, Pakistan.</span>
+                            <li><span class="icon icon-map-marker"></span><span class="text">Gulshan-e-Millat, Karachi, Pakistan.</span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span
                                         class="text">+92 3322208090</span></a></li>
