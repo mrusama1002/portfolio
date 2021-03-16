@@ -46,6 +46,7 @@ class Message extends Notification
                     ->line('You have received new message on your website.')
                     ->line("Sender Name: " . json_encode($this->message['name']))
                     ->line("Sender Email: " . json_encode($this->message['email']))
+                    ->line("Sender Phone: " . json_encode($this->message['phone']))
                     ->line("Subject: " . json_encode($this->message['subject']))
                     ->line("Message: " . json_encode($this->message['message']))
                     ->line('Thank you for using our application!');

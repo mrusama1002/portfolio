@@ -748,26 +748,30 @@
                     @csrf
                     <div class="form-group">
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                               placeholder="Your Name">
+                               placeholder="Enter Your Full Name">
                         @error('name')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                               placeholder="Your Email">
+                               placeholder="Enter Your Email Address">
                         @error('email')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <input type="text" name="subject" class="form-control @error('subject') is-invalid @enderror"
-                               placeholder="Subject">
+                               placeholder="Type Subject">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror"
+                               placeholder="Enter your phone Number">
                     </div>
                     <div class="form-group">
                         <textarea name="message" id="" cols="30" rows="7"
                                   class="form-control @error('message') is-invalid @enderror"
-                                  placeholder="Message"></textarea>
+                                  placeholder="Type a Message"></textarea>
                         @error('message')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
