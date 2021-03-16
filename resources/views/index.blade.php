@@ -101,7 +101,7 @@
                 <div class="counter-wrap ftco-animate d-flex mt-md-3">
                     <div class="text">
                         <p class="mb-4">
-                            <span class="number" data-number="10">0</span>
+                            <span class="number" data-number="20">0</span>
                             <span>Project complete</span>
                         </p>
                         <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
@@ -134,8 +134,8 @@
                             <span class="date">2016-2020</span>
                             <h2>Bachelor of Science in Computer Science</h2>
                             <span class="position">Sindh Institute Of Management And Technology</span>
-                            <p>I have completed my graduation degree from SIMT University(Sindh Institute of Management
-                                And Technology) with 3.2 GPA In January 2020.</p>
+                            <p>I have completed my graduation degree from SIMT University (Sindh Institute of Management
+                                And Technology) In January 2020.</p>
                         </div>
                     </div>
                     <div class="resume-wrap d-flex ftco-animate">
@@ -147,8 +147,7 @@
                             <h2>Diploma in Web Development</h2>
                             <span class="position">AL-Fateem Academy</span>
                             <p>I have completed diploma for one year in web designing and development in 2019 from
-                                AL-Fateem
-                                Academy. </p>
+                                AL-Fateem Academy. </p>
                         </div>
                     </div>
                     <div class="resume-wrap d-flex ftco-animate">
@@ -697,17 +696,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-                <div class="align-self-stretch box text-center p-4 shadow">
-                    <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icon-phone2"></span>
-                    </div>
-                    <div>
-                        <h3 class="mb-4">Contact Number</h3>
-                        <p><a href="tel://+923322208090">+ 92 332 2208090</a></p>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="col-md-6 col-lg-3 d-flex ftco-animate">--}}
+{{--                <div class="align-self-stretch box text-center p-4 shadow">--}}
+{{--                    <div class="icon d-flex align-items-center justify-content-center">--}}
+{{--                        <span class="icon-phone2"></span>--}}
+{{--                    </div>--}}
+{{--                    <div>--}}
+{{--                        <h3 class="mb-4">Contact Number</h3>--}}
+{{--                        <p><a href="tel://+923322208090">+ 92 332 2208090</a></p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                 <div class="align-self-stretch box text-center p-4 shadow">
                     <div class="icon d-flex align-items-center justify-content-center">
@@ -719,17 +718,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-                <div class="align-self-stretch box text-center p-4 shadow">
-                    <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icon-globe"></span>
-                    </div>
-                    <div>
-                        <h3 class="mb-4">Website</h3>
-                        <p><a href="#" style="font-size: 14px;">www.creativethinksolution.com</a></p>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="col-md-6 col-lg-3 d-flex ftco-animate">--}}
+{{--                <div class="align-self-stretch box text-center p-4 shadow">--}}
+{{--                    <div class="icon d-flex align-items-center justify-content-center">--}}
+{{--                        <span class="icon-globe"></span>--}}
+{{--                    </div>--}}
+{{--                    <div>--}}
+{{--                        <h3 class="mb-4">Website</h3>--}}
+{{--                        <p><a href="#" style="font-size: 14px;">www.creativethinksolution.com</a></p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
 
         <div class="row no-gutters block-9">
