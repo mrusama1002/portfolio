@@ -19,7 +19,7 @@ class HomeController extends Controller
 
         $data = $request->except('_token');
 
-        Notification::route('mail', 'Portfolio')
+        Notification::route('mail', 'user@portfolio.com')
             ->notify(new Message($data));
         return redirect('/');
     }
