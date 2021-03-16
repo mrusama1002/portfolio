@@ -765,7 +765,7 @@
                                placeholder="Type Subject">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror"
+                        <input type="number" name="phone" class="form-control @error('phone') is-invalid @enderror"
                                placeholder="Enter your phone Number">
                     </div>
                     <div class="form-group">
