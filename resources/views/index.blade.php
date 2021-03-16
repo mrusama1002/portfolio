@@ -48,6 +48,15 @@
 <section class="hero-wrap js-fullheight">
     <div class="overlay"></div>
     <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger msg-box">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
             <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
                 <div class="text text-center">
@@ -94,7 +103,7 @@
                             <li class="d-flex"><span>Address:</span> <span>Karachi Pakistan</span></li>
                             <li class="d-flex"><span>Zip code:</span> <span>78900</span></li>
                             <li class="d-flex"><span>Email:</span> <span>mr.usamakhan1002@gmail.com</span></li>
-{{--                            <li class="d-flex"><span>Phone: </span> <span>+92-332-2208090</span></li>--}}
+                            {{--                            <li class="d-flex"><span>Phone: </span> <span>+92-332-2208090</span></li>--}}
                         </ul>
                     </div>
                 </div>
@@ -668,7 +677,8 @@
             <div class="col-md-7 ftco-animate text-center">
                 <h2>I'm also <span>Available</span> for freelancing</h2>
                 <p>I`am available for home based or office based job</p>
-                <p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5">For Hire me contact me</a></p>
+                <p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5">For Hire me contact me</a>
+                </p>
             </div>
         </div>
     </div>
@@ -696,17 +706,17 @@
                     </div>
                 </div>
             </div>
-{{--            <div class="col-md-6 col-lg-3 d-flex ftco-animate">--}}
-{{--                <div class="align-self-stretch box text-center p-4 shadow">--}}
-{{--                    <div class="icon d-flex align-items-center justify-content-center">--}}
-{{--                        <span class="icon-phone2"></span>--}}
-{{--                    </div>--}}
-{{--                    <div>--}}
-{{--                        <h3 class="mb-4">Contact Number</h3>--}}
-{{--                        <p><a href="tel://+923322208090">+ 92 332 2208090</a></p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-4 shadow">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-phone2"></span>
+                    </div>
+                    <div>
+                        <h3 class="mb-4">Contact Number</h3>
+                        <p><a href="tel://hidden">(hidden)</a></p>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-6 col-lg-3 d-flex ftco-animate">
                 <div class="align-self-stretch box text-center p-4 shadow">
                     <div class="icon d-flex align-items-center justify-content-center">
@@ -714,39 +724,53 @@
                     </div>
                     <div>
                         <h3 class="mb-4">Email Address</h3>
-                        <p><a href="mailto:mr.usamakhan1002@gmail.com" style="font-size: 14px;">mr.usamakhan1002@gmail.com</a></p>
+                        <p><a href="mailto:mr.usamakhan1002@gmail.com" style="font-size: 14px;">mr.usamakhan1002@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
-{{--            <div class="col-md-6 col-lg-3 d-flex ftco-animate">--}}
-{{--                <div class="align-self-stretch box text-center p-4 shadow">--}}
-{{--                    <div class="icon d-flex align-items-center justify-content-center">--}}
-{{--                        <span class="icon-globe"></span>--}}
-{{--                    </div>--}}
-{{--                    <div>--}}
-{{--                        <h3 class="mb-4">Website</h3>--}}
-{{--                        <p><a href="#" style="font-size: 14px;">www.creativethinksolution.com</a></p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-4 shadow">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-globe"></span>
+                    </div>
+                    <div>
+                        <h3 class="mb-4">Website</h3>
+                        <p><a href="#" style="font-size: 14px;">www.creativethinksolution.com (pending)</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row no-gutters block-9">
             <div class="col-md-6 order-md-last d-flex">
-                <form action="#" class="bg-light p-4 p-md-5 contact-form">
+                <form action="{{ route('messageSent') }}" method="post" class="bg-light p-4 p-md-5 contact-form">
                     @csrf
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name">
+                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
+                               placeholder="Your Name">
+                        @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email">
+                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                               placeholder="Your Email">
+                        @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" name="subject" class="form-control @error('subject') is-invalid @enderror"
+                               placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="7" class="form-control"
+                        <textarea name="message" id="" cols="30" rows="7"
+                                  class="form-control @error('message') is-invalid @enderror"
                                   placeholder="Message"></textarea>
+                        @error('message')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -812,8 +836,8 @@
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">Gulshan-e-Millat, Karachi, Pakistan.</span>
                             </li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span
-                                        class="text">+92 3322208090</span></a></li>
+                            {{--                            <li><a href="#"><span class="icon icon-phone"></span><span--}}
+                            {{--                                        class="text">+92 3322208090</span></a></li>--}}
                             <li><a href="#"><span class="icon icon-envelope"></span><span
                                         class="text"> Mr.usamakhan1002@gmail.com</span></a></li>
                         </ul>
