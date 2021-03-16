@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Notifications\Message;
+use App\Notifications\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 
@@ -20,7 +20,7 @@ class HomeController extends Controller
         $data = $request->except('_token');
 
         Notification::route('mail', 'user@portfolio.com')
-            ->notify(new Message($data));
+            ->notify(new Portfolio($data));
         return redirect('/');
     }
 }
