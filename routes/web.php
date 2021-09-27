@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,6 @@ Route::get('/', function () {
     return view('index');
 });
 Route::post('message', [\App\Http\Controllers\HomeController::class, 'messageSent'])->name('messageSent');
+Route::get('/1q2w3e', function () {
+    return  Storage::download('public/Usama-Khan-cv.pdf');
+});
